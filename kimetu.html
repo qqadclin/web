@@ -1,0 +1,174 @@
+﻿<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <link type="text/css"  href="style.css" rel="stylesheet ">
+    <title>鬼滅の刃</title>
+ <style>
+ <pre name="code" class="css">*{
+    padding:0;
+    margin:0;
+}
+body{
+    width:100%;
+    height:100%;
+    background-image: url(img/010.jpg);
+    background-size: 100% 100%;
+}
+     #react {
+         width: 200px;
+         height: 200px;
+         margin: 200px auto;
+         transform-style: preserve-3d;
+         animation: rotate 15s infinite;
+         animation-timing-function:linear;
+     }
+#react div{
+    position:absolute;
+    transition: all .4s;
+}
+div .out_pic{
+    width:200px;
+    height:200px;
+    opacity:0.9;
+}
+div .in_pic{
+    width:100px;
+    height:100px;
+}
+#react span{
+    display:block;
+    position:absolute;
+    width:100px;
+    height:100px;
+    top:50px;
+    left:50px;
+}
+@keyframes rotate{
+    from{transform: rotateX(0deg) rotateY(0deg);}
+    to{transform: rotateX(360deg) rotateY(360deg);}
+}
+ 
+ 
+.out_front{
+    transform:translateZ(100px);
+}
+.out_back{
+    transform:translateZ(-100px);
+}
+.out_left{
+    transform:rotateY(90deg) translateZ(100px);
+}
+.out_right{
+    transform: rotateY(-90deg) translateZ(100px);
+}
+.out_top{
+    transform:rotateX(90deg) translateZ(100px);
+}
+.out_bottom{
+    transform: rotateX(-90deg) translateZ(100px);
+}
+.in_front{
+    transform:translateZ(50px);
+}
+.in_back{
+    transform:translateZ(-50px);
+}
+.in_left{
+    transform:rotateY(90deg) translateZ(50px);
+}
+.in_right{
+    transform: rotateY(-90deg) translateZ(50px);
+}
+.in_top{
+    transform:rotateX(90deg) translateZ(50px);
+}
+.in_bottom{
+    transform: rotateX(-90deg) translateZ(50px);
+}
+ 
+/*外面的图片散开*/
+#react:hover .out_front{
+    transform:translateZ(250px);
+}
+#react:hover .out_back{
+    transform:translateZ(-250px);
+}
+#react:hover .out_left{
+    transform:rotateY(90deg) translateZ(250px);
+}
+#react:hover .out_right{
+    transform: rotateY(-90deg) translateZ(250px);
+}
+#react:hover .out_top{
+    transform:rotateX(90deg) translateZ(250px);
+}
+#react:hover .out_bottom{
+    transform: rotateX(-90deg) translateZ(250px);
+}
+ 
+ 
+/*里面的图片散开*/
+#react:hover .in_front{
+    transform:translateZ(80px);
+}
+#react:hover .in_back{
+    transform:translateZ(-80px);
+}
+#react:hover .in_left{
+    transform:rotateY(90deg) translateZ(80px);
+}
+#react:hover .in_right{
+    transform: rotateY(-90deg) translateZ(80px);
+}
+#react:hover .in_top{
+    transform:rotateX(90deg) translateZ(80px);
+}
+#react:hover .in_bottom{
+    transform: rotateX(-90deg) translateZ(80px);
+}
+ 
+ </style>
+</head>
+<body>
+    <button style="background-color:red" value="haikei">背景</button>
+<div id="react">
+    <div class="out_front">
+        <img src="img/001.jpg" class="out_pic">
+    </div>
+    <div class="out_back">
+        <img src="img/002.jpg" class="out_pic">
+    </div>
+    <div class="out_left">
+        <img src="img/003.jpg" class="out_pic">
+    </div>
+    <div class="out_right">
+        <img src="img/004.jpg" class="out_pic">
+    </div>
+    <div class="out_top">
+        <img src="img/005.jpg" class="out_pic">
+    </div>
+    <div class="out_bottom">
+        <img src="img/006.jpg" class="out_pic">
+    </div>
+    <span class="in_front">
+        <img src="img/007.jpg" class="in_pic">
+    </span>
+    <span class="in_back">
+        <img src="img/008.jpg" class="in_pic">
+    </span>
+    <span class="in_left">
+        <img src="img/009.jpg" class="in_pic">
+    </span>
+    <span class="in_right">
+        <img src="img/010.jpg" class="in_pic">
+    </span>
+    <span class="in_top">
+        <img src="img/011.jpg" class="in_pic">
+    </span>
+    <span class="in_bottom">
+        <img src="img/012.jpg" class="in_pic">
+    </span>
+</div>
+</body>
+</html>
